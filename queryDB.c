@@ -18,8 +18,11 @@ void getAllDayStats(char *date, MYSQL *conn);
 void getTimeIntervalStats(char *date, MYSQL *conn);
 void getMultiDayStats(MYSQL *conn);
 void getMultiEntireDayStats(MYSQL *conn, char *startDate, char *endDate);
+void getMultiTimeIntervalStats(MYSQL *conn, char *startDate, char *endDate);
 void fetchData(MYSQL *conn, char *query);
 int isValidTime(const char *str, int *hour, int *minute);
+int readInput(const char *prompt, int n1, int n2);
+void readTimeInput(const char *prompt, int *hour, int *minute, char *time);
 
 int main(void)
 {
